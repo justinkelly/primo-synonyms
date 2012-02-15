@@ -80,9 +80,8 @@ You can your course codes into the course_codes.txt file in a non-spaced format 
 
 ### Extending to other versions of Primo
 
-If you want to create a synonyms file for a version of Primo not listed just create a subfolder with the version number ie 3.1.0,
-copy the current primo misspelling file (located at: ng/jaguar/home/profile/analysis/sysnonyms/) to the version folder
+If you want to create a synonyms file for a version of Primo not listed just create a subfolder with the version number ie 3.1.0
 
-Add/Edit the custom_synonymn.txt file if you wish
+Add/Edit the custom_synonymns.txt file if you wish
 
-Then run the ./merge_primo_synonymm.pl and upload the new file
+Then run the ./merge_primo_synonymms.pl and upload the new file

@@ -25,6 +25,14 @@ print "Do you want to include course codes? (y/n)";
 $course_codes = <>;
 $course_codes = trim($course_codes);
 
+
+if($course_codes =~ m/^y/)
+{ 
+	print "What is the name of your course codes file ie. course_codes.txt?";
+	$course_codes_file = <>;
+	$course_codes_file = trim($course_codes_file);
+}
+
 #################################################
 #Merge the contents of the custom misspell file #
 #################################################
@@ -47,9 +55,9 @@ if($course_codes =~ m/^y/)
 
 	open (OUTPUT_APPEND, '>>',"$primo_version/userSynonyms");
 
-	$LOGFILE = "course_codes.txt";
+	$LOGFILE = $course_codes_file;
 
-	open(LOGFILE) or die("Could not open course_codes file.");
+	open(LOGFILE) or die("Could not open the course code '$course_codes_file' file.");
 	foreach $line (<LOGFILE>) {
 	    $line = trim($line);
 

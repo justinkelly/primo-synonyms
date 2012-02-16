@@ -2,11 +2,20 @@ Extended synonymn files for ExLibris Primo
 =========
 ### What
 
-This extendes the default Primo synonym files, adds the ability to include reformatted course codes and provides a way to add your own custom synonym
+  * Extend the default Primo synonym files
+  * Adds the ability to include reformatted course codes
+  * Provides a way to add your own custom synonyms
+  * Create a community repository of synonym files (non-English and specific purpose files)
+ 
+Given that ExLibris produces pretty good English, German, Korean and Chinese synonym files we don't intend to create 1 big extra file for these languages
+but rather create a community repository where you can see what other institutes have done, modify them and upload your own specific files and to enable you to create your own institution specific files
+
+And also create synonym files for languages that ExLibris currently don't cater for.
 
 ### Why 
 
-I needed a way to get thousands of our course code ie. HAH219 into Primo in the way that people search for them 'HAH 219' and to add and modify other synonyms 
+  * I needed a way to get thousands of our course code ie. HAH219 into Primo in the way that people search for them 'HAH 219'
+  * I needed to boost/add/modify to the standard synonyms
 
 ### How to run
     ./merge_primo_synonyms.pl

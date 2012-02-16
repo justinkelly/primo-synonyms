@@ -33,10 +33,14 @@ Then it will ask if you want to reformat your course codes - if you have any
 If you enter 'y' to this question, you'll be asked for the file name
 
     What is the name of your course codes file ie. course_codes.txt?
+    
+Then you'll be prompted for a output file name
+
+    Please enter a file name for the new synonyms file, default is userSynonyms
 
 This will now convert the contents of the $course_codes_file into Primo synonyms file formatting and reformat the codes to hwo students search for them ie. HAH101 becomes HAH 101
 
-Copy the newly producted $version/userSysnonyms to the Primo misspelling directory at ng/jaguar/home/profile/analysis/sysnonyms/
+Copy the newly producted $version/$output_file_name to the Primo misspelling directory at ng/jaguar/home/profile/analysis/sysnonyms/userSynonyms
 
 ### Course codes
 

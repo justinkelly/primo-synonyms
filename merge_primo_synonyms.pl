@@ -37,7 +37,7 @@ if($course_codes =~ m/^y/)
 print "Please enter a file name for the new synonyms file, default is userSynonyms :: ";
 $output_file = <>;
 $output_file = trim($output_file);
-if($output_files eq '')
+if($output_file eq '')
 {
     $output_file = 'userSynonyms';
 }

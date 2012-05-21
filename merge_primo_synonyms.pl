@@ -17,27 +17,43 @@ sub trim($)
 	return $string;
 }
 
-print "Do you want to include course codes? (y/n) :: ";
-$course_codes = <>;
-$course_codes = trim($course_codes);
+print "Do you want to include the British English synonyms file? (y/n)";
+$brit_english = <>;
+$brit_english = trim($brit_english);
 
 
-print "Please enter a file name of your custom synonyms file, default is english_userSynonyms.txt";
+print "Please enter a file name of your custom synonyms file, default is custom_synonyms.txt";
 $custom_file = <>;
 $custom_file = trim($custom_file);
-if($customer_file eq '')
+if($custom_file eq '')
 {
-    $custom_file = 'english_userSynonyms.txt';
+    $custom_file = 'custom_synonyms.txt';
 }
 
 $output_file = 'userSynonyms';
 
+#################################################
+#Merge the contents of the custom misspell file #
+#################################################
+if($brit_english =~ m/^y/)
+{ 
+	open (BRIT, "english_userSynonyms.txt");
+	open (OUTPUT, '>',"$output_file");
+
+	while (<BRIT>) {
+		chomp;
+		print OUTPUT "$_\n";
+	}
+
+	close(BRIT);
+	close(OUTPUT);
+}
 
 #################################################
 #Merge the contents of the custom misspell file #
 #################################################
 open (CUSTOM, "$custom_file");
-open (OUTPUT_CUSTOM, '>',"$output_file");
+open (OUTPUT_CUSTOM, '>>', "$output_file");
 
 while (<CUSTOM>) {
 	chomp;
@@ -61,9 +77,12 @@ close (NAMES_FILE);
 open(FILE, '>',"$output_file" ) || die "unable to open file write <$!>";
   
   foreach(@sorted) {
-    print FILE "$_";
+  if( $_ !~ /^\s*$/ ) 
+    {
+   	 print FILE "$_";
+    }
   }
   
 close(FILE);
 
-print "Your new synonyms file has been saved to $output_file"
+print "\n ####### \n Your new synonyms file has been saved to $output_file \n #######\n"

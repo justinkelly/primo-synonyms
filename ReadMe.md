@@ -8,7 +8,7 @@ Extended synonymn files for ExLibris Primo
   * But it you search for other normal US/UK works it *wont* work
       * if you search for 'behaviour' it will *NOT* show results for 'behavior'
       * if you search for 'behavior' it will show results for 'behaviour'
-  * This repository of UK/US synonymns means that your primo can now do 2 way synonym search for hundreds of other synonymns
+  * This repository of UK/US synonyms means that your primo can now do 2 way synonym search for hundreds of other synonymns
   * So
       * if you search for 'behaviour' it *WILL* show results for 'behavior'
       * if you search for 'behavior' it *WILL* show results for 'behaviour'

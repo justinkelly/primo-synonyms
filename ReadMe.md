@@ -6,12 +6,12 @@ Extended synonymn files for ExLibris Primo
   * Currently primo only 2 way synonym search for very common US/UK English words like 'color' and 'colour'
   * Meaning if you search for either colour or color you will see the same results
   * But it you search for other normal US/UK works it *wont* work
-      * if you search for 'behaviour' it will *NOT* show resutls for 'behavior'
-      * if you search for 'behavior' it will show resutls for 'behaviour'
+      * if you search for 'behaviour' it will *NOT* show results for 'behavior'
+      * if you search for 'behavior' it will show results for 'behaviour'
   * This repository of UK/US synonymns means that your primo can now do 2 way synonym search for hundreds of other synonymns
   * So
-      * if you search for 'behaviour' it *WILL* show resutls for 'behavior'
-      * if you search for 'behavior' it *WILL* show resutls for 'behaviour'
+      * if you search for 'behaviour' it *WILL* show results for 'behavior'
+      * if you search for 'behavior' it *WILL* show results for 'behaviour'
  
 ### Why 
 
@@ -19,7 +19,7 @@ Extended synonymn files for ExLibris Primo
 
 ### How to implement in Primo
 
-Copy the english_userSynonyms.txt to the Primo synonyms directory at ng/jaguar/home/profile/analysis/sysnonyms/userSynonyms and then execute a Deploy All in the Primo Back Office
+Copy the `english_userSynonyms.txt` to the Primo synonyms directory at `ng/jaguar/home/profile/analysis/sysnonyms/userSynonyms` and then execute a Deploy All in the Primo Back Office
 
 ### Custom synonyms
 

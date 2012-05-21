@@ -17,47 +17,36 @@ Extended synonymn files for ExLibris Primo
 
   * I needed to boost/add/modify to the standard synonyms
 
+### How to implement in Primo
+
+Copy the english_userSynonyms.txt to the Primo synonyms directory at ng/jaguar/home/profile/analysis/sysnonyms/userSynonyms and then execute a Deploy All in the Primo Back Office
+
+### Custom synonyms
+
+You can add new synonyms into the custom_synonyms.txt file in the Primo format - such as
+
+    connection = connexion (very high)
+    connexion = connection (very high)
+
+Refer the Primo Techinlca Guide for more info on ranking synonyms etc..
+
 ### How to run
+
+Run
     ./merge_primo_synonyms.pl
 
 You will then be asked 
 
-    Which version of Primo you are using?
+    Do you want to include the British English synonyms file? (y/n)
 
-Choose one that corresponds to an available sub-folder ie. 3.1.2
+If you enter 'y' to this question, it will use the english_userSynonyms.txt file included
 
-Then it will ask if you want to reformat your course codes - if you have any
+Then it will ask if you for your custom synonyms file
 
-    Do you want to include course codes? (y/n)
-
-If you enter 'y' to this question, you'll be asked for the file name
-
-    What is the name of your course codes file ie. course_codes.txt?
+    Please enter a file name of your custom synonyms file, default is custom_synonyms.txt
     
-Then you'll be prompted for a output file name
+If you leave this blank it will use the custom_synonyms.txt file
 
-    Please enter a file name for the new synonyms file, default is userSynonyms
+The script will now merge the english_userSynonyms.txt with the custom_synonyms.txtfile and save it as userSynonyms
 
-This will now convert the contents of the $course_codes_file into Primo synonyms file formatting and reformat the codes to hwo students search for them ie. HAH101 becomes HAH 101
-
-Copy the newly producted $version/$output_file_name to the Primo misspelling directory at ng/jaguar/home/profile/analysis/sysnonyms/userSynonyms
-
-
-### Adding new synonyms
-
-You can add new misspellings into the custom_synonyms.txt file in the Primo format - such as
-
-    counselor = counsellor (very high)
-
-Where the incorrect spelling is the first word followed by a space then the correct spelling
-Followed by the ranking brackets
-- Refer the Primo Techinlca Guide for more info on ranking synonyms etc..
-
-
-### Extending to other versions of Primo
-
-If you want to create a synonyms file for a version of Primo not listed just create a subfolder with the version number ie 3.1.0
-
-Add/Edit the custom_synonymns.txt file if you wish
-
-Then run the ./merge_primo_synonymms.pl and upload the new file
+To immplement this in Primo - copy the userSynonyms file to ng/jaguar/home/profile/analysis/sysnonyms/userSynonyms and to a Deploy All in primo 

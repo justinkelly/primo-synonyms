@@ -2,19 +2,19 @@ Extended synonymn files for ExLibris Primo
 =========
 ### What
 
-  * Extend the default Primo synonym files
-  * Adds the ability to include reformatted course codes
-  * Provides a way to add your own custom synonyms
-  * Create a community repository of synonym files (non-English and specific purpose files)
+  * Extend the default Primo synonym files to cover British English (en_GB, en_AU, en_NZ, en_CA, etc..)
+  * Currently primo only 2 way synonym search for very common US/UK English words like 'color' and 'colour'
+  * Meaning if you search for either colour or color you will see the same results
+  * But
+      * if you search for 'behaviour' it will NOT show resutls for 'behavior'
+      * if you search for 'behavior' it will show resutls for 'behaviour'
+  * This repository of UK/US synonymns means that your primo can now do 2 way sysnonym search for ish and specific purpose files)
+  * So
+      * if you search for 'behaviour' it WILL show resutls for 'behavior'
+      * if you search for 'behavior' it WILL show resutls for 'behaviour'
  
-Given that ExLibris produces pretty good English, German, Korean and Chinese synonym files we don't intend to create 1 big extra file for these languages
-but rather create a community repository where you can see what other institutes have done, modify them and upload your own specific files and to enable you to create your own institution specific files
-
-And also create synonym files for languages that ExLibris currently don't cater for.
-
 ### Why 
 
-  * I needed a way to get thousands of our course code ie. HAH219 into Primo in the way that people search for them 'HAH 219'
   * I needed to boost/add/modify to the standard synonyms
 
 ### How to run

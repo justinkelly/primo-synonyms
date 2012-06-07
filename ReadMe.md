@@ -1,5 +1,7 @@
 Extended synonymn files for ExLibris Primo
 =========
+
+__Note: these synonyns are additional ones, seperate from the eng_Synonyms file that comes with Primo__
 ### What
 
   * Extend the default Primo synonym files to cover British English (en_GB, en_AU, en_NZ, en_CA, etc..)

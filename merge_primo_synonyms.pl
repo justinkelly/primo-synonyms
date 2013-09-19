@@ -85,4 +85,6 @@ open(FILE, '>',"$output_file" ) || die "unable to open file write <$!>";
   
 close(FILE);
 
+system("cat userSynonyms | sed 's/=/ = /g' | awk '{printf \"%-30s%-2s%-30s%s %s\\n\", \$1,\$2,\$3,\$4,\$5}' > userSynonyms");
+
 print "\n ####### \n Your new synonyms file has been saved to $output_file \n #######\n"

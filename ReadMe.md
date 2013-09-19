@@ -21,16 +21,16 @@ _Note: these synonymns are additional ones, seperate from the eng_Synonynms file
 
 ### How to implement in Primo
 
-Copy the `english_userSynonyms.txt` to the Primo synonyms directory at `ng/jaguar/home/profile/analysis/sysnonyms/userSynonyms` and then execute a Deploy All in the Primo Back Office
+Copy the `english_userSynonyms.txt` to the Primo synonyms directory at `/exlibris/primo/p4_1/ng/jaguar/home/profile/analysis/synonyms/userSynonyms` and then execute a Deploy All in the Primo Back Office
 
-### Custom synonyms
+## Custom synonyms
 
 You can add new synonyms into the custom_synonyms.txt file in the Primo format - such as
 
     connection = connexion (very high)
     connexion = connection (very high)
 
-Refer the Primo Techinlca Guide for more info on ranking synonyms etc..
+Refer the Primo Technical Guide for more info on ranking synonyms etc..
 
 ### How to run
 
@@ -49,6 +49,7 @@ Then it will ask if you for your custom synonyms file
     
 If you leave this blank it will use the custom_synonyms.txt file
 
-The script will now merge the english_userSynonyms.txt with the custom_synonyms.txtfile and save it as userSynonyms
+The script will now merge the `english_userSynonyms.txt` with the `custom_synonyms.txt` file and save it as `userSynonyms`
 
-To immplement this in Primo - copy the userSynonyms file to ng/jaguar/home/profile/analysis/sysnonyms/userSynonyms and to a Deploy All in primo 
+To immplement this in Primo - copy the userSynonyms file to `/exlibris/primo/p4_1/ng/jaguar/home/profile/analysis/synonyms/`
+and to a Deploy All in primo 

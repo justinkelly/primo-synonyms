@@ -53,3 +53,12 @@ The script will now merge the `english_userSynonyms.txt` with the `custom_synony
 
 To immplement this in Primo - copy the userSynonyms file to `/exlibris/primo/p4_1/ng/jaguar/home/profile/analysis/synonyms/`
 and to a Deploy All in primo 
+
+### Misc
+
+
+Format a synonyms file to be correctly tabulated
+
+```
+cat english_userSynonyms.txt | sed '/^$/d' | sed 's/=/ = /g' | awk '{printf "%-30s%-2s%-30s%s %s\n", $1,$2,$3,$4,$5}'
+```
